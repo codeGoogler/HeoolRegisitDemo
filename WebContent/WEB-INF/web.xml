@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	
+	
+	<display-name>HelloFromServlet</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file><!-- 输入容器URL是要跳转的界面：比如：http://localhost:8080/ 
+			要去跳转的地方 -->
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<servlet>
+		<servlet-name>RegisitHttpservice2</servlet-name>
+		<servlet-class>com.yuer.mm.RegisitHttpservice2</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>RegisitHttpservice2</servlet-name>
+		<url-pattern>/a/b</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>RegisitHttpservice</servlet-name>
+		<servlet-class>com.yuer.mm.RegisitHttpservice</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>RegisitHttpservice</servlet-name>
+		<url-pattern>/a/*</url-pattern>
+	</servlet-mapping>
+	
+	<context-param>
+		<description>asdfasdfasf</description>
+		<param-name>address</param-name>
+		<param-value>北京市朝阳区巴巴爸爸吧</param-value>
+	</context-param>
+	
+	 
+	<servlet>
+		<servlet-name>DownLaodHttpServlet</servlet-name>
+		<servlet-class>com.yuer.mm.DownLaodHttpServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>DownLaodHttpServlet</servlet-name>
+		<url-pattern>/DownLaodHttpServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+</web-app>
